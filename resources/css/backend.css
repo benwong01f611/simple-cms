@@ -1,0 +1,15 @@
+body {
+    color: #cbcbcb !important;
+
+}
+tr{
+    color: #cbcbcb !important;
+}
+
+ul li a:hover{
+    background-color: rgba(108, 117, 125) !important;
+}
+
+#ckf-modal{
+    top: 0px !important;
+}

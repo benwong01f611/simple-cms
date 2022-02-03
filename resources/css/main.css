@@ -1,0 +1,20 @@
+body {
+    color: rgba(248, 249, 250);
+}
+
+.sitename {
+    color: inherit;
+    text-decoration: none;
+}
+.sitename:hover{
+    text-decoration: none;
+}
+
+.content-link:hover{
+    color: inherit;
+    text-decoration: underline;
+}
+.content-link {
+    color: inherit;
+    text-decoration: none;
+}

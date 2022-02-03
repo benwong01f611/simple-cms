@@ -1,0 +1,54 @@
+tr th a {
+    color: inherit;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-decoration: none;
+    z-index: 10;
+}
+
+tr th a:hover{
+    color: inherit;
+}
+
+th.sorting:after, th.sorting_asc:after, th.sorting_desc:after{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: block;
+    font-family: FontAwesome;
+}
+
+th.sorting_asc:after {
+    content: "\f0de";
+}
+
+th.sorting_desc:after {
+    content: "\f0dd";
+}
+th.sorting:after {
+    content: "\f0dc";
+}
+
+table {
+    border-collapse: collapse;
+    text-align: center;
+    width: 100%;
+    border-spacing: 0;
+}
+
+th{
+    white-space: nowrap;
+    position: relative;
+}
+@-moz-document url-prefix() {
+    td {
+        height: 100%;
+    }
+}
+
+td, th {
+    color: #cbcbcb !important;
+}

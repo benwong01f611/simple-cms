@@ -1,0 +1,27 @@
+Options -Indexes
+
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options nosniff
+  RequestHeader unset Proxy
+</IfModule>
+
+ErrorDocument 404 /core/page/page.php?error=404
+ErrorDocument 403 /core/page/page.php?error=403
+
+<IfModule mod_rewrite.c>
+  RewriteEngine on
+
+  RewriteRule ^backend/(.*)$ /core/backend/index.php?backendpage=$1&%{QUERY_STRING} [L]
+  RewriteRule ^page/(.*)$ /core/page/page.php?alias=$1 [L]
+
+  
+  RewriteRule ^login$ /core/login/login.php [L]
+  RewriteRule ^logout$ /core/login/logout.php [L]
+
+  RewriteRule ^backend(/)?$ /core/backend/index.php [L]
+
+  RewriteRule ^search$ /core/search.php?%{QUERY_STRING} [L]
+
+  RewriteRule ^(data/upload/) - [L]
+  RewriteRule ^(data) - [F]
+</IfModule>
